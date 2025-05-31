@@ -1,5 +1,10 @@
 import discord
 import re
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # works locally (ignored on Render)
+TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
