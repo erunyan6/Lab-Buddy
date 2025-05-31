@@ -7,6 +7,7 @@ load_dotenv()  # works locally (ignored on Render)
 TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
+intents.message_content = True
 client = discord.Client(intents=intents)
 
 # ========== Dilution Calculation ==========
@@ -107,5 +108,4 @@ async def on_message(message):
         except ValueError as e:
             await message.channel.send(f"⚠️ Error: {str(e)}")
 
-# ========== Run Bot ==========
 client.run(TOKEN)
