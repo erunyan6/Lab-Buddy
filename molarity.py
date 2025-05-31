@@ -1,9 +1,6 @@
 import discord
 import re
 
-# Replace with your real bot token
-TOKEN = "MTM3ODE1NTQ0MTg5NjQyMzQ0NA.GXXKDc.x_kDXQH2vgRUZj-8tI-7IgZhxTvYa_Koa1RxZ8"
-
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 
